@@ -11,7 +11,7 @@ brew --prefix duckdb
 ```
 
 ```elixir
-Mix.install([{:ectoduck, github: "ruslandoga/EctoDuck"}],
+Mix.install([{:ectoduck, github: "ruslandoga/ectoduck"}],
   force: true,
   system_env: [
     DUCKDB_NIFS_CFLAGS: "-I/opt/homebrew/opt/duckdb/include",
