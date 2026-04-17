@@ -11,7 +11,7 @@ brew --prefix duckdb
 ```
 
 ```elixir
-Mix.install([{:ectoduck, github: "ruslandoga/ectoduck"}],
+Mix.install([{:ectuck, github: "ruslandoga/ectuck"}],
   force: true,
   system_env: [
     DUCKDB_NIFS_CFLAGS: "-I/opt/homebrew/opt/duckdb/include",
@@ -20,7 +20,7 @@ Mix.install([{:ectoduck, github: "ruslandoga/ectoduck"}],
 )
 
 defmodule Repo do
-  use Ecto.Repo, adapter: EctoDuck, otp_app: :demo
+  use Ecto.Repo, adapter: Ectuck, otp_app: :demo
 end
 
 Application.put_env(:demo, Repo, database: ":memory:")
